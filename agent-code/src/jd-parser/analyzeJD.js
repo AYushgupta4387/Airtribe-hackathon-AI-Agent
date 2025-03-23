@@ -1,4 +1,4 @@
-const { callOpenAI } = require("./llmCaller");
+const { callOpenAI } = require("../llmCaller");
 
 async function analyzeWithGPT(textContent) {
   try {

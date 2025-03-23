@@ -1,6 +1,6 @@
 const express = require("express");
 const { scrapeTextContent } = require("./src/scraper");
-const { analyzeWithGPT } = require("./src/analyzeJD");
+const { analyzeWithGPT } = require("./src/jd-parser/analyzeJD");
 const { PORT } = require("./src/config");
 const resumeParserRoutes = require("./src/resume-parser/resumeParser"); // Import resume parser routes
 const path = require("path");
