@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume & Job Description Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Resume & Job Description Analyzer</h1>
+    <p>Your personal AI-powered career assistant</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Optimize Your Resume for Any Job</h2>
+    <p>Upload your resume and paste the job description to get personalized feedback.</p>
+  </section>
+
+  <!-- Form Section -->
+  <section id="form-section">
+    <form id="analyzer-form">
+      <label for="job-url">Job Posting URL (Optional):</label>
+      <input type="url" id="job-url" placeholder="https://example.com/job-posting" />
+
+      <label for="resume">Upload Resume (PDF or DOCX):</label>
+      <input type="file" id="resume" accept=".pdf, .doc, .docx" required />
+
+      <label for="job-description">Paste Job Description:</label>
+      <textarea id="job-description" rows="8" placeholder="Paste the job description here..." required></textarea>
+
+      <button type="button" onclick="analyzeResume()">Analyze Resume</button>
+    </form>
+  </section>
+
+  <!-- Results Section -->
+  <section id="results-section">
+    <h2>Analysis Results</h2>
+    <div id="results">
+      <p>Results will be displayed here...</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Resume Analyzer. All rights reserved. Made with ❤️ by Shreya</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
