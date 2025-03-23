@@ -1,23 +1,19 @@
+// filepath: c:\Users\diptu\Projects\Airtribe-hackathon-AI-Agent\agent-code\index.js
 const express = require('express');
+const path = require('path');
 
-// Entry point for the application
+const resumeParserRoutes = require('./src/resume-parser/resumeParser');
 
-// Import necessary modules
-const resumeParserRoutes = require('./src/resume-parser/resumeParser'); // Import resume parser routes
-
-// Initialize the app
 const app = express();
 
 // Middleware
 app.use(express.json());
 
-// Define routes
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+// Serve static files (e.g., HTML)
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Use resume parser routes
-app.use('/api/resume', resumeParserRoutes); // Mount resume parser routes under '/api/resume'
+app.use('/api/resume', resumeParserRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 3000;

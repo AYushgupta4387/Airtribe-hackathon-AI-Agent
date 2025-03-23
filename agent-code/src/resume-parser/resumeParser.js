@@ -1,15 +1,23 @@
+// filepath: c:\Users\diptu\Projects\Airtribe-hackathon-AI-Agent\agent-code\src\resume-parser\resumeParser.js
 const express = require('express');
 const multer = require('multer');
 const pdfParse = require('pdf-parse');
 const path = require('path');
+const fs = require('fs'); // Import fs module
 
 const router = express.Router(); // Create a router instance
+
+// Ensure the uploads directory exists
+const uploadsDir = path.join(__dirname, '../../uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
 
 // Configure multer for file uploads
 const upload = multer({
     storage: multer.diskStorage({
         destination: (req, file, cb) => {
-            cb(null, 'uploads/'); // Directory to save uploaded files
+            cb(null, uploadsDir); // Directory to save uploaded files
         },
         filename: (req, file, cb) => {
             cb(null, `${Date.now()}-${file.originalname}`);
