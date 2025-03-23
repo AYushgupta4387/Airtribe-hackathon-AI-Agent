@@ -1,0 +1,22 @@
+{
+  "name": "agent-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AYushgupta4387/Airtribe-hackathon-AI-Agent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AYushgupta4387/Airtribe-hackathon-AI-Agent/issues"
+  },
+  "homepage": "https://github.com/AYushgupta4387/Airtribe-hackathon-AI-Agent#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

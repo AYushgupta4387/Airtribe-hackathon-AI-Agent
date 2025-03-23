@@ -30,7 +30,8 @@
     "dotenv": "^16.4.7",
     "googleapis": "^134.0.0",
     "langchain": "^0.3.19",
-    "langsmith": "^0.3.14"
+    "langsmith": "^0.3.14",
+    "nvm": "^0.0.4"
   },
   "engines": {
     "node": ">=16.0.0"
