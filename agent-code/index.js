@@ -3,6 +3,7 @@ const { scrapeTextContent } = require("./src/scraper");
 const { analyzeWithGPT } = require("./src/analyzer");
 const { PORT } = require("./src/config");
 const resumeParserRoutes = require("./src/resume-parser/resumeParser"); // Import resume parser routes
+const path = require("path");
 
 const app = express();
 
