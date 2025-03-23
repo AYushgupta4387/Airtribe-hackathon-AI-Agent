@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   "homepage": "https://github.com/AYushgupta4387/Airtribe-hackathon-AI-Agent#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.2",
+    "nodemon": "^3.1.9",
+    "pdf-parse": "^1.1.1"
   }
 }
