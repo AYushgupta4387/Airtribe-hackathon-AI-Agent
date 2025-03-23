@@ -1,6 +1,6 @@
 const express = require("express");
 const { scrapeTextContent } = require("./src/scraper");
-const { analyzeWithGPT } = require("./src/analyzer");
+const { analyzeWithGPT } = require("./src/analyzeJD");
 const { PORT } = require("./src/config");
 const resumeParserRoutes = require("./src/resume-parser/resumeParser"); // Import resume parser routes
 const path = require("path");
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // Use resume parser routes
 app.use("/api/resume", resumeParserRoutes); // Mount resume parser routes under '/api/resume'
 
-app.get("/analyze", async (req, res) => {
+app.get("/analyzeJD", async (req, res) => {
   try {
     const url = req.query.url;
     if (!url) {
