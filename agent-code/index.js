@@ -4,16 +4,13 @@ const { analyzeWithGPT } = require("./src/analyzer");
 const { PORT } = require("./src/config");
 const resumeParserRoutes = require("./src/resume-parser/resumeParser"); // Import resume parser routes
 
-// Initialize the app
 const app = express();
 
 // Middleware
 app.use(express.json());
 
-// Define routes
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
+// Serve static files (e.g., HTML)
+app.use(express.static(path.join(__dirname, "public")));
 
 // Use resume parser routes
 app.use("/api/resume", resumeParserRoutes); // Mount resume parser routes under '/api/resume'
