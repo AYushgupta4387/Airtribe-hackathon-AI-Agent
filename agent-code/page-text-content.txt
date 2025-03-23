@@ -1,0 +1,88 @@
+Careers
+Skip navigation links
+Sign in
+Job Details
+arrow_back
+Back to jobs search
+CPU Emulation Engineer
+corporate_fare
+Google
+place
+Austin, TX, USA
+; +3 more
+bar_chart
+Mid
+Apply
+share
+info_outline
+X
+Info Note: By applying to this position you will have an opportunity to share your preferred working location from the following: Austin, TX, USA; Mountain View, CA, USA; Portland, OR, USA; Poughkeepsie, NY, USA.
+Note: By applying to this position you will have an opportunity to share your preferred working location from the following: Austin, TX, USA; Mountain View, CA, USA; Portland, OR, USA; Poughkeepsie, NY, USA.
+
+
+Minimum qualifications:
+Bachelor's degree in Electrical Engineering, Computer Engineering, Computer Science, or a related field, or equivalent practical experience.
+
+3 years of experience with industry-standard emulation tools and techniques.
+
+Experience with scripting languages such as Perl, Python, or Tcl, and high level design language such as Verilog or SystemVerilog.
+
+Experience with an industry available emulator such as Cadence Palladium, Mentor Veloce, Synopsys EVE or FPGA rapid prototyping platforms.
+
+
+
+Preferred qualifications:
+Master's degree or PhD in Electrical Engineering, Computer Engineering or Computer Science, with an emphasis on computer architecture.
+
+Knowledge of and experience with chip design flow including simulation and synthesis.
+
+Knowledge of and experience with design verification languages and methodologies, such as SystemVerilog and UVM/OVM.
+About the job
+
+Be part of a team that pushes boundaries, developing custom silicon solutions that power the future of Google's direct-to-consumer products. You'll contribute to the innovation behind products loved by millions worldwide. Your expertise will shape the next generation of hardware experiences, delivering unparalleled performance, efficiency, and integration.
+
+Google's mission is to organize the world's information and make it universally accessible and useful. Our team combines the best of Google AI, Software, and Hardware to create radically helpful experiences. We research, design, and develop new technologies and hardware to make computing faster, seamless, and more powerful. We aim to make people's lives better through technology.
+
+
+
+The US base salary range for this full-time position is $132,000-$189,000 + bonus + equity + benefits. Our salary ranges are determined by role, level, and location. Within the range, individual pay is determined by work location and additional factors, including job-related skills, experience, and relevant education or training. Your recruiter can share more about the specific salary range for your preferred location during the hiring process.
+
+Please note that the compensation details listed in US role postings reflect the base salary only, and do not include bonus, equity, or benefits. Learn more about benefits at Google.
+
+Responsibilities
+Plan and execute RTL partitioning, synthesis, and validation to build efficient, accurate emulation models.
+
+Run extensive test suites and software workloads on the emulation platform for thorough pre-silicon verification.
+
+Implement robust debugging methodologies and tools to quickly identify and resolve complex design issues.
+
+Analyze and optimize emulation performance and resource utilization to maximize efficiency.
+
+Enforce best practices, develop tools, and manage resources effectively through close collaboration with design and verification teams.
+
+Information collected and processed as part of your Google Careers profile, and any job applications you choose to submit is subject to Google's Applicant and Candidate Privacy Policy.
+
+Google is proud to be an equal opportunity and affirmative action employer. We are committed to building a workforce that is representative of the users we serve, creating a culture of belonging, and providing an equal employment opportunity regardless of race, creed, color, religion, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition (including breastfeeding), expecting or parents-to-be, criminal histories consistent with legal requirements, or any other basis protected by law. See also Google's EEO Policy, Know your rights: workplace discrimination is illegal, Belonging at Google, and How we hire.
+
+If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.
+
+Google is a global company and, in order to facilitate efficient collaboration and communication globally, English proficiency is a requirement for all roles unless stated otherwise in the job posting.
+
+To all recruitment agencies: Google does not accept agency resumes. Please do not forward resumes to our jobs alias, Google employees, or any other organization location. Google is not responsible for any fees related to unsolicited resumes.
+
+Follow Life at Google on
+More about us
+About usopen_in_new
+Contact usopen_in_new
+Pressopen_in_new
+Related Information
+Investor relationsopen_in_new
+Blogopen_in_new
+Equal Opportunity
+
+Google is proud to be an equal opportunity and affirmative action employer. We are committed to building a workforce that is representative of the users we serve, creating a culture of belonging, and providing an equal employment opportunity regardless of race, creed, color, religion, gender, sexual orientation, gender identity/expression, national origin, disability, age, genetic information, veteran status, marital status, pregnancy or related condition (including breastfeeding), expecting or parents-to-be, criminal histories consistent with legal requirements, or any other basis protected by law. See also Google's EEO Policy, Know your rights: workplace discrimination is illegal, Belonging at Google, and How we hire.
+
+Privacyopen_in_new
+Applicant & Candidate Privacyopen_in_new
+Termsopen_in_new
+helpHelpopen_in_new
