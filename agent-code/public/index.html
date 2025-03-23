@@ -1,16 +1,181 @@
-<!-- filepath: c:\Users\diptu\Projects\Airtribe-hackathon-AI-Agent\agent-code\public\upload.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload PDF</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume & Job Description Analyzer</title>
+  <style>
+    /* Embedded CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    #hero {
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #results {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f0f8ff;
+      border-left: 5px solid #007bff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <h1>Upload a PDF File</h1>
-    <form id="uploadForm" action="/api/resume/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".pdf" required />
-        <button type="submit">Upload</button>
+  <!-- Header Section -->
+  <header>
+    <h1>Resume & Job Description Analyzer</h1>
+    <p>Your personal AI-powered career assistant</p>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Optimize Your Resume for Any Job</h2>
+    <p>Upload your resume and paste the job description to get personalized feedback.</p>
+  </section>
+
+  <!-- Form Section -->
+  <section id="form-section">
+    <form id="analyzer-form" action="/api/resume/upload" method="POST" enctype="multipart/form-data">
+      <label for="job-url">Job Posting URL (Optional):</label>
+      <input type="url" id="url" name="jobUrl" placeholder="https://example.com/job-posting">
+
+      <label for="resume">Upload Resume (PDF or DOCX):</label>
+      <input type="file" id="resumeFile" name="resumeFile" accept=".pdf, .doc, .docx" required>
+
+      <button type="submit">Analyze Resume</button>
     </form>
+  </section>
+
+  <!-- Results Section -->
+  <section id="results-section">
+    <h2>Analysis Results</h2>
+    <div id="results">
+      <p id="missingKeywords"></p>
+      <p id="suggestions"></p>
+    </div>
+  </section>
+
+  <!-- Temporary Output Section for Testing -->
+  <section id="output-section">
+    <h2>Debug Output</h2>
+    <pre id="debugOutput" style="background-color: #f4f4f4; padding: 10px; border: 1px solid #ccc; border-radius: 4px; overflow-x: auto;"></pre>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2023 Resume Analyzer. All rights reserved. Made with ❤️ by Your Name</p>
+  </footer>
+
+  <script>
+    // Embedded JavaScript
+    document.getElementById('analyzer-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const resumeFile = formData.get('resumeFile');
+      const jobDescriptionText = formData.get('jobDescription').toLowerCase();
+
+      if (resumeFile) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+          const resumeText = event.target.result.toLowerCase();
+          const jobKeywords = extractKeywords(jobDescriptionText);
+          const missingKeywords = jobKeywords.filter(keyword => !resumeText.includes(keyword));
+          displayResults(missingKeywords);
+
+          // Display debug output
+          document.getElementById('debugOutput').textContent = JSON.stringify({
+            jobKeywords,
+            missingKeywords,
+            resumeText,
+          }, null, 2);
+        };
+        reader.readAsText(resumeFile);
+      } else {
+        alert("Please upload a resume file!");
+      }
+    });
+
+    function extractKeywords(text) {
+      const commonWords = new Set(['the', 'and', 'of', 'in', 'to', 'a', 'for', 'with', 'on', 'at']);
+      const words = text.split(/\W+/).filter(word => word.length > 2 && !commonWords.has(word));
+      return [...new Set(words)];
+    }
+
+    function displayResults(missingKeywords) {
+      const missingKeywordsElement = document.getElementById('missingKeywords');
+      const suggestionsElement = document.getElementById('suggestions');
+
+      if (missingKeywords.length > 0) {
+        missingKeywordsElement.innerHTML = `<strong>Missing Keywords:</strong> ${missingKeywords.join(', ')}`;
+        suggestionsElement.innerHTML = `<strong>Suggestions:</strong> Consider adding these keywords to your resume: ${missingKeywords.join(', ')}.`;
+      } else {
+        missingKeywordsElement.innerHTML = "<strong>No missing keywords found!</strong>";
+        suggestionsElement.innerHTML = "<strong>Your resume looks great for this job!</strong>";
+      }
+    }
+  </script>
 </body>
 </html>
